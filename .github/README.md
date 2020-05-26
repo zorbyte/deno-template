@@ -14,4 +14,4 @@ Ensure that you lint everything with prettier and then `deno fmt` prior to commi
 
 ## License
 
-This project is licensed under the MIT license. Please consider its existence... See [LICENSE](./LICENSE) for more information.
+This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more information.
