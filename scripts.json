@@ -17,7 +17,7 @@
         {
           "cmd": "./bin/setup_dev.ts",
           "tsconfig": "./etc/tsconfig.json",
-          "allow": ["write"]
+          "allow": ["write", "read"]
         },
         {
           "cmd": "deno cache --lock-write ./src/deps.ts",
