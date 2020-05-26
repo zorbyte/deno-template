@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "lint": "deno fmt ./src ./bin",
+    "dev": {
+      "desc": "Run the program.",
+      "cmd": "deno run --unstable ./src/main.ts",
+      "tsconfig": "./etc/tsconfig.json",
+      "lock": "./etc/lock.json",
+      "allow": ["env"],
+      "env": {
+        "DEBUG": "true"
+      }
+    },
+    "setup_dev": {
+      "desc": "Sets up the development environment.",
+      "pll": [
+        {
+          "cmd": "./bin/setup_dev.ts",
+          "tsconfig": "./etc/tsconfig.json",
+          "allow": ["write"]
+        },
+        {
+          "cmd": "deno cache --lock-write ./src/deps.ts",
+          "lock": "./etc/lock.json"
+        }
+      ]
+    }
+  }
+}
